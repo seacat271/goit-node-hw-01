@@ -29,7 +29,7 @@ async function getContactById(contactId) {
 async function removeContact(contactId) {
     try {
         const contacts = await dataGet(contactsPath);
-        const newData = contacts.filter(item => item.id !== contactId);
+        const newData = contacts.filter(item => item.id !== (contactId + ""));
         await dataChange(contactsPath, newData)
         return contactId
     } catch (error) {
