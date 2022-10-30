@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/seacat271/goit-node-hw-01#readme",
   "dependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "yargs": "^17.6.0"
   }
 }
