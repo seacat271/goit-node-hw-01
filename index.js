@@ -11,19 +11,19 @@ const {   listContacts, getContactById, removeContact, addContact} = require("./
 function invokeAction({ action, id, name, email, phone }) {
     switch (action) {
       case "list":
-        listContacts()
+        listContacts().then(data => console.table(data))
         break;
   
       case "get":
-        getContactById(id)
+        getContactById(id).then(data => console.log(data))
         break;
   
       case "add":
-        addContact(name, email, phone)
+        addContact(name, email, phone).then(data => console.log(data))
         break;
   
       case "remove":
-        removeContact(id)
+        removeContact(id).then(data => console.log(data))
         break;
   
       default:
@@ -31,4 +31,4 @@ function invokeAction({ action, id, name, email, phone }) {
     }
   }
 
-//   invokeAction(argv);
+  invokeAction(argv);
