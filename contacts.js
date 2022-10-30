@@ -4,23 +4,26 @@ const path = require("path");
 const contactsPath = path.resolve("./db/contacts.json");
 const testPath = path.resolve("./test/test.txt");
 // console.log(contactsPath)
-const data = (path) => fs.readFile(path, "utf-8");
+const data = path => fs.readFile(path, "utf-8");
 // await fs.writeFile(testPath, data, "utf-8")
 
 
-
-async function listContacts  ()  {
+function listContacts  ()  {
     try {
-        return await data(contactsPath);
+         return data(contactsPath);
+       
     } catch (error) {
         console.log(error)
   }
 
 }
-  
-async  function getContactById(contactId) {
+// contacts.filter(item => item.id === contactId)
+async function getContactById(contactId) {
    try {
-    return await data(contactsPath).filter(item => item.id === contactId)
+    const contacts = await data(contactsPath);
+    console.log(contacts)
+    const contactsById =  await contacts.filter(item => item.id === contactId)
+    console.log(contactsById)
     } catch (error) {
         console.log(error)
     }
