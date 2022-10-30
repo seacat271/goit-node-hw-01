@@ -2,5 +2,6 @@ const {   listContacts, getContactById, removeContact, addContact} = require("./
 
 // addContact("Kirill", "seacat@mail.com", "04040004040");
 // console.log(addContact("Kirill", "seacat@mail.com", "04040004040"))
-
-getContactById("3").then(data => data)
+// listContacts().then(data => console.log(data))
+getContactById("4").then(data => console.log(data))
+// removeContact("3").then(data => console.log(data))
