@@ -20,7 +20,7 @@ async function listContacts()  {
 async function getContactById(contactId) {
    try {
     const contacts = await dataGet(contactsPath)
-   return contacts.filter(item => item.id === contactId)
+   return contacts.filter(item => item.id === (contactId + ""))
     } catch (error) {
         console.log(error)
     }
