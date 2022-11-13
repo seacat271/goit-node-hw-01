@@ -9,13 +9,13 @@ const dataChange = async (path, newData) => {
     return await fs.writeFile(path, JSON.stringify(newData), "utf-8")
 }
 
-async function listContacts()  {
-    try {
-         return await dataGet(contactsPath);
-    } catch (error) {
-        console.log(error)
-  }
-}
+// async function listContacts()  {
+//     try {
+//          return await dataGet(contactsPath);
+//     } catch (error) {
+//         console.log(error)
+//   }
+// }
 
 async function getContactById(contactId) {
    try {
